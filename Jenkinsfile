@@ -1,5 +1,5 @@
 pipeline {
-    agent { label ' ' }
+    agent { label 'GAMEOFLIFE' }
     triggers { pollSCM('* * * * *') }
     parameters { 
         choice(name: 'BRANCH', choices: ['master', 'gameofife-release-.1', 'gameofife-release-1.0.1'], description: 'This is for branch selection')
