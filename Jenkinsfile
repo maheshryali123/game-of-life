@@ -12,6 +12,12 @@ pipeline {
                        url: 'https://github.com/maheshryali123/game-of-life.git'
             }
         }
+        stage('build_code') {
+            steps {
+                sh 'mvn clean pacakge'
+
+            }
+        }
         stage('sonar_scan') {
             steps {
                 withSonarQubeEnv('SONAR') {
@@ -19,4 +25,5 @@ pipeline {
             }
         }
     }
+}
 }
