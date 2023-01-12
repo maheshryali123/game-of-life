@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('git_clone') {
             steps {
-                git branch: ${params.BRANCH},
+                git branch: "${params.BRANCH}",
                        url: 'https://github.com/maheshryali123/game-of-life.git'
             }
         }
