@@ -14,7 +14,7 @@ pipeline {
         }
         stage('build_code') {
             steps {
-                sh 'mvn clean pacakge'
+                sh 'mvn clean package'
             }
         }
         stage('sonar_scan') {
