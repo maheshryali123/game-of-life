@@ -8,14 +8,13 @@ pipeline {
     stages {
         stage('git_clone') {
             steps {
-                git branch: '${params.BRANCH}',
+                git branch: ${params.BRANCH},
                        url: 'https://github.com/maheshryali123/game-of-life.git'
             }
         }
         stage('build_code') {
             steps {
                 sh 'mvn clean pacakge'
-
             }
         }
         stage('sonar_scan') {
@@ -25,5 +24,5 @@ pipeline {
             }
         }
     }
-}
+  }
 }
