@@ -19,7 +19,7 @@ pipeline {
         }
         stage('sonar_scan') {
             steps {
-                withSonarQubeEnv('SONAR') {
+                withSonarQubeEnv('sonar_scan') {
                 sh 'mvn ${params.MAVEN_BUILD} sonar:sonar'
             }
         }
