@@ -10,8 +10,11 @@ pipeline {
         }
         stage('Build_the_package') {
             steps {
-                sh 'export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH''
-                sh 'mvn clean package'
+                sh """
+                export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH'
+                java -version
+                mvn clean package
+                """
             }
         }
     }
