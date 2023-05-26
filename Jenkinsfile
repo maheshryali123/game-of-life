@@ -17,7 +17,7 @@ pipeline {
                 """
             }
         }
-        stage('sonar_scan') {
+        stage('sonarscan') {
             steps {
                 withSonarQubeEnv('sonar_scan') {
                     sh """
