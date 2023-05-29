@@ -16,7 +16,7 @@ pipeline {
                 //mvn clean package
                 //"""
             //}
-        }
+        //}
         stage('sonarscan') {
             steps {
                 withSonarQubeEnv('sonar_scan') {
