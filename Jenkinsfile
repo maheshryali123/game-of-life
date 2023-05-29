@@ -8,14 +8,14 @@ pipeline {
                        url: 'https://github.com/maheshryali123/game-of-life.git'
             }
         }
-        stage('Build_the_package') {
-            steps {
-                sh """
-                export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH'
-                java -version
-                mvn clean package
-                """
-            }
+        //stage('Build_the_package') {
+            //steps {
+                //sh """
+                //export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH'
+                //java -version
+                //mvn clean package
+                //"""
+            //}
         }
         stage('sonarscan') {
             steps {
@@ -23,7 +23,6 @@ pipeline {
                     sh """
                     export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH'
                     java -version
-                    ${scannerHome}/bin/sonar-scanner
                     mvn clean package sonar:sonar
                     """
                 }
