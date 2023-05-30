@@ -43,6 +43,7 @@ pipeline {
             agent { label 'K8S' }
             steps {
                 sh """
+                kubectl --version
                 kubectl apply -f de.yaml --namespace dev
                 kubectl apply -f svc.yaml --namespace dev
                 kubectl apply -f namespace.yaml
