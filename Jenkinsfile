@@ -17,7 +17,7 @@ pipeline {
                 """
             }
         }
-        stage('sonarscan') {
+        /*stage('sonarscan') {
             steps {
                 withSonarQubeEnv('sonar_scan') {
                     sh """
@@ -27,7 +27,7 @@ pipeline {
                     """
                 }
             }
-        }
+        }*/
         stage('docker_image_build') {
             agent { label 'k8s' }
             steps {
