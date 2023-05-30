@@ -32,7 +32,7 @@ pipeline {
             agent { label 'K8S' }
             steps {
                 sh """
-                docker build -t gameoflife123:$BUILD_ID
+                docker image build -t gameoflife123:$BUILD_ID .
                 docker tag forgameoflife123:$BUILD_ID 389485504177.dkr.ecr.us-east-1.amazonaws.com/forgameoflife123:$BUILD_ID
                 docker push 389485504177.dkr.ecr.us-east-1.amazonaws.com/forgameoflife123:$BUILD_ID
                 """
