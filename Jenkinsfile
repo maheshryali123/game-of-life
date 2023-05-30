@@ -29,7 +29,7 @@ pipeline {
             }
         }*/
         stage('docker_image_build') {
-            agent { label 'k8s' }
+            agent { label 'K8S' }
             steps {
                 sh """
                 docker image build -t gameoflife123:$BUILD_ID
@@ -39,7 +39,7 @@ pipeline {
             }
         }
         stage('kubernetes_deploy_to_dev') {
-            agent { label 'k8s' }
+            agent { label 'K8S' }
             steps {
                 sh """
                 kubectl apply -f de.yaml --namespace dev
