@@ -43,7 +43,7 @@ pipeline {
             agent { label 'K8S' }
             steps {
                 sh """
-                aws eks update-kubeconfig --region us-east-2 --name education-eks-5x0q4LbQ
+                aws eks update-kubeconfig --region us-east-1 --name education-eks-5x0q4LbQ
                 curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.25.9/2023-05-11/bin/linux/amd64/kubectl
                 chmod +x ./kubectl
                 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
