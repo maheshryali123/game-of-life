@@ -51,7 +51,7 @@ pipeline {
                 kubectl apply -f namespace.yaml
                 kubectl apply -f dep.yaml 
                 kubectl apply -f svc.yaml 
-                kubectl get pods
+                kubectl get pods --namespace dev-namespace
                 """
             }
         }
