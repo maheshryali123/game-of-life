@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: openmrs
-          image: 389485504177.dkr.ecr.us-east-1.amazonaws.com/forgameoflife123:latest
+          image: 389485504177.dkr.ecr.us-east-1.amazonaws.com/forgameoflife123:53
           ports:
             - containerPort: 8080
               protocol: TCP   
