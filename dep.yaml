@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: gameoflife
+  namespace: dev-namespace
 spec:
   minReadySeconds: 3
   replicas: 2
