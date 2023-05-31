@@ -7,5 +7,7 @@ WORKDIR /opt/tomcat
 RUN tar xvzf apache-tomcat-9.0.75-src.tar.gz
 COPY ./gameoflife-web/target/gameoflife.war /opt/tomcat/gameoflife.war
 RUN cp /opt/tomcat/gameoflife.war /opt/tomcat/apache-tomcat-9.0.75-src/webapps/gameoflife.war
+WORKDIR /opt/tomcat/apache-tomcat-9.0.75-src/bin/
+RUN chmod 777 catalina.sh
 EXPOSE 8080
-CMD [ "/opt/tomcat/apache-tomcat-9.0.75-src/bin/catalina.sh", "run" ]
+CMD ["/opt/tomcat/apache-tomcat-9.0.75-src/bin/catalina.sh", "run"]
