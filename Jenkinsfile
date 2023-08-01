@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Build_the_application') {
             steps {
-                sh 'java --version'
+                sh 'export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH''
                 sh 'mvn package'
             }
         }
