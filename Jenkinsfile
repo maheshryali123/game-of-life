@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'PRACTICE' }
-    triggers { POLLSCM ('* * * * *') }
+    triggers { pollSCM ('* * * * *') }
     stages {
         stage('Clone_the_code') {
             steps {
