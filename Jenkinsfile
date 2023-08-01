@@ -20,6 +20,7 @@ pipeline {
         }
         stage('Build_the_application') {
             steps {
+                sh 'java --version'
                 sh 'mvn package'
             }
         }
