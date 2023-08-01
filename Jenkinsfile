@@ -13,7 +13,7 @@ pipeline {
                 sh """
                 #!/bin/bash
                 echo "Java is installing in the jenkins_node"
-                sudo apt install openjdk-11-jdk -y
+                sudo apt install openjdk-8-jdk -y
                 export PATH='/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin:$PATH'
                 """
             }
