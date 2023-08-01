@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'PRACTICE' }
+    agent { label 'PROJECT' }
     triggers { pollSCM ('* * * * *') }
     stages {
         stage('Clone_the_code') {
